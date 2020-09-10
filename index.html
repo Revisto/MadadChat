@@ -1,0 +1,331 @@
+ <!DOCTYPE html>
+    <html>
+
+    <head>
+    
+        <meta charset="UTF-8">
+        <title>MadadChat</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        
+        <!-- Favicon -->
+        <link rel="icon" href="/static//ico/favicon.png">
+        <link rel="shortcut icon" href="/static//ico/favicon.png">
+
+        <!-- icon -->
+<meta name="viewport" content="width=1024">
+
+        <link rel="stylesheet" href="/static//css/style.css">
+        <link rel="stylesheet" href="/static//css/style_two.css">
+        <link rel="stylesheet" href="/static//css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static//css/responsive.css">
+        <link rel="stylesheet" href="/static//css/reset.min.css">
+        <link rel="stylesheet" href="/static//css/vivify.min.css">
+        <link rel="stylesheet" href="/static//css/font-awesome.min.css">
+        <link rel="stylesheet" href="/static//css/fontello.css">
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
+
+        <script src="/static//js/jquery-3.2.1.min.js"></script>
+
+
+        <script src="/static//js/offline.min.js"></script>
+        <script src="/static//js/tether.min.js"></script>
+        <script src="/static//js/bootstrap.min.js"></script>
+        <script src="/static//js/feather.min.js"></script>
+        <script src="/static//js/music.js"></script>
+        <!-- Offlinejfs Plugin Styles -->
+        <link rel="./static/stylesheet" href="/static//css/offline-language-english.css">
+        <link rel="./static/stylesheet" href="/static//css/offline-theme-slide.css">
+
+        <!-- Emoji One Area -->
+        <link rel="/static//stylesheet" href="/static//css/emojionearea.min.css">
+        <script src="./static/js/emojionearea.min.js"></script>
+<meta name="viewport" content="width=device-width,user-scalable=no">
+        <link rel="stylesheet" href="/static//css/music.css">
+
+    </head>
+
+    <body>
+
+        <div class="body">
+
+            <!--   Emoji One Area Script -->
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $("#example1").emojioneArea({
+                        pickerPosition: "top",
+                        filtersPosition: "bottom",
+                        tonesStyle: "radio",
+                        hideSource: false,
+                    });
+                });
+
+            </script>
+
+
+            <div class="rows">
+                <!-- Side Panel -->
+                <div class="col-md-4 side-panel">
+
+                    <!--SideBar One-->
+                    <div class="side-one">
+
+                        <!-- Side Panel Header -->
+                        <div class="col-md-12 side-panel-header">
+
+                            <div class="">
+                                <img src="/static//img/logo.png" class="logo">
+                            </div>
+
+
+
+
+                            <div class="icon-more2">
+
+
+
+                                <a title="Notifications">
+									<i data-feather="bell"></i>
+								</a>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Side Panel Profile -->
+
+
+                        <div id="users-list">
+                            <!-- Side Panel Search -->
+                             <div class="search-box"
+                                <>
+                            </div>
+                            <!--  Temporary Users Starts  NOTE: For Testing Purposes -->
+                            <div class="left">
+                                <div class="users">
+                                    <ul class="people" data-searchable>
+                                        <li class="person" data-chat="person1">
+                                            <div class="user-status online"></div>
+                                            <img src="/static//img/pro_2.png" alt="">
+                                            <span class="name">مددبات</span>
+                                            <span class="time">آنلاین برای همیشه</span>
+                                            <span class="preview">برای صحبت آماده ای؟</span>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Side One Ends -->
+
+                </div>
+                <!-- Side Panel Ends -->
+
+
+                <!-- Message Body Starts -->
+
+                <div class="col-md-8 msg-wrapper">
+
+                    <div class="col-md-12 msg-wrapper-header">
+
+                        <div class="chat-user-meta">
+                            <span class="tag">
+                            <span class="tag-avatar ava" style="background-image: url(/static//img/pro_2.png)"></span> مددبات
+                            <div class="usr_name__online"></div>
+                            </span>
+                            <span class="user-typing">همیشه آنلاین</span>
+                        </div>
+                        <div class="icon-more">
+                            <a href="http://madadbot.ir/"><i class="more" data-feather="log-out"></i></a>
+                        </div>
+
+                        <div class="icon-info">
+                            <a href="http://madadbot.ir/"><i class="more" data-feather="help-circle"></i></a>
+
+                        </div>
+
+                        <div class="icon-video">
+                            <a onclick="myFunction()" lass="more" data-feather="video" class='submit' ></a>
+
+                            <script>
+                            function myFunction() {
+                            alert("به زودیِ زودی");
+                            }
+                            </script>
+
+
+                        </div>
+                    </div>
+
+                    <div class="msg-wrapper-body">
+
+                        <!--
+                        Displaying messages to user Starts
+                        -->
+
+                        <div class="msg-container" id="msg-container">
+                            <div class="msg-single" ng-repeat="msg_data in msgs" ng-style="{'float': uid==msg_data.to_id ? 'left' :'right'} ">
+
+                                <ul>
+
+                                    <!-- RECEIVED MESSAGE  -->
+                                    <div class="sender-message-line table-content vivify popInBottom">
+
+                                        <div class="table-content-cell" id="ava">
+                                            <img src="/static//img/pro_2.png" alt="DP" class="avatar">
+                                        </div>
+
+                                        <div class="msg-conatiner">
+                                            <div class="actual-msg"></div>
+ <!--                               
+<audio controls class='audio' >
+  <source src="http://del.shiksong.ir/Mp3-Music/En/Mordad-98/DJ%20Shadow%20-%20'Rocket%20Fuel'%20MP3%20-%20ShikSong.mp3" type="audio/mpeg">
+
+</audio> -->
+ <!--  
+<img src="https://static.dribbble.com/users/1935/screenshots/14127727/media/8abe70bee1229594450947561d22cbee.mp4" width="350" alt="MadadContent" style="border-radius: 20px;box-shadow: 0px 0px 40px #00000026;">
+-->
+
+
+ <!--      
+<video width="350" controls="" style="
+    border-radius: 20px;
+    box-shadow: 0px 0px 40px #00000069;
+">
+  <source src="https://static.dribbble.com/users/1935/screenshots/14127727/media/8abe70bee1229594450947561d22cbee.mp4" type="video/mp4" style="border-radius: 20px;box-shadow: 0px 0px 40px #00000026;">
+</video>
+-->
+
+                                            <div class="message-seen text-center"> 25:00 </div>
+                                        </div>
+
+
+
+
+
+                                    </div>
+
+                                    <!-- SENT MESSAGE  -->
+                                    <!--
+                                    <div class="sender-message-line table-content vivify swoopInBottom">
+
+                                        <div class="msg-conatiner-two">
+                                            <div class="actual-msg"></div>
+
+                                            <span>Dude just go to sleep</span>
+
+                                            <div class="">
+                                                <div class="message-seen text-right">9:40 pm</div>
+                                            </div>
+                                        </div>
+                                    </div>
+ -->
+
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <!--
+                        Displaying messages to user Ends
+                        -->
+
+
+                        <!-- Message input starts -->
+                        <div class="message-input input">
+
+                            <input type="text" id="message-to-send" placeholder="پیامتون رو بنویسید ..." />
+
+                            <div class="emoji-btn open"><i data-feather="plus-square"></i>
+                                <div class="emoji-popup">
+                                    <div class="emoji-wrapper"></div>
+                                </div>
+                            </div>
+
+                            <div class="wrap">
+                                <button class="submit ripple"><i data-feather="send"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- SCRIPTS  -->
+
+        <!-- JS Chats Handlers   -->
+        <script id="message-template" type="text/x-handlebars-template">
+            <div class="sender-message-line table-content vivify popInBottom">
+                <div class="msg-conatiner-two">
+                    <div class="actual-msg"></div>
+
+                    <span>{{messageOutput}}</span>
+
+                    <div class="">
+                        <div class="message-seen text-right">{{time}}</div>
+                    </div>
+                </div>
+            </div>
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script id="message-response-template" type="text/x-handlebars-template">
+
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Offlinejs Plugin -->
+        <!--
+                <script type="text/javascript">
+                    var run = function() {
+                        if (Offline.state === 'up')
+                            Offline.check();
+                    }
+                    setInterval(run, 5000);
+
+                </script>
+        -->
+
+        <script>
+            feather.replace()
+
+        </script>
+
+        <script src="/static//js/handlebars.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="/static//js/chats.js"></script>
+        <script src='/static//js/search.js'></script>
+        <script src='/static//js/emoji.js'></script>
+        <script src="/static//js/ripple-button.js"></script>
+        <script src="/static//js/index.js"></script>
+
+    </body>
+
+    </html>
